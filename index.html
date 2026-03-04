@@ -97,8 +97,8 @@
                 return;
             }
             const firstDigit = parseInt(match[0], 10);
-            const parity = (firstDigit % 2 === 0) ? 'စုံ' : 'မ';
-            resultDiv.textContent = `ကာ နံပါတ်က ${firstDigit} ဆိုတော့  {parity} – ဒီနေ့တွေ အပြင်ထွက်လို့ရတယ်.`;
+            const parity = (firstDigit % 2 === 0) ? 'even' : 'odd';
+            resultDiv.textContent = `ကာ နံပါတ်က ${firstDigit} ဆိုတော့ – ဒီနေ့တွေ အပြင်ထွက်လို့ရတယ်.`;
             const today = new Date();
             const table = generateCalendar(today.getFullYear(), today.getMonth(), parity);
             calendarDiv.appendChild(table);
