@@ -51,7 +51,7 @@
         <h2 class="text-center mb-3"> ကားထွက်ရမယ့်ရက် </h2>
         <form id="plateForm" class="mb-3">
             <div class="mb-2">
-                <label for="plate" class="form-label">ကားနံပါတ်ထဲ့ပါ </label>
+                <label for="plate" class="form-label">ကားနံပါတ်ထည့်ပါ </label>
                 <input type="text" id="plate" name="plate" class="form-control" placeholder="e.g. 1A12333" required>
             </div>
             <button type="submit" class="btn btn-primary w-100"> စစ်ပေးဦး </button>
@@ -98,7 +98,8 @@
             }
             const firstDigit = parseInt(match[0], 10);
             const parity = (firstDigit % 2 === 0) ? 'even' : 'odd';
-            resultDiv.textContent = `ကာ နံပါတ်က ${firstDigit} ဆိုတော့ ${parity} – ဒီနေ့တွေ အပြင်ထွက်လို့ရတယ်.`;
+const parity1 = (firstDigit % 2 === 0) ? 'စုံဂဏာန်း' : 'မဂဏန်း';
+            resultDiv.textContent = `ကား နံပါတ်က ${firstDigit} ဆိုတော့ ${parity1} – ဒီနေ့တွေ အပြင်ထွက်လို့ရတယ်.`;
             const today = new Date();
             const table = generateCalendar(today.getFullYear(), today.getMonth(), parity);
             calendarDiv.appendChild(table);
